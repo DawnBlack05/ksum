@@ -1,0 +1,7 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h1>{{user_Student_number}}</h1>
+<a href = "umbrella_borrow/{{user_Student_number}}"><button type="button" class = "w-btn w-btn-green" style = "font-family: 'Jeju Gothic', sans-serif; font-weight : normal; font-size : 30px; margin : 20px 70px">우산 빌리기</button></a>
+<a href = "umbrella_return/{{user_Student_number}}"><button type="button" class = "w-btn w-btn-green" style = "font-family: 'Jeju Gothic', sans-serif; font-weight : normal; font-size : 30px; margin : 20px 70px">우산 반납하기</button></a>
+{% endblock %}

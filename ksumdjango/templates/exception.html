@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+{% block content %}
+{% if exception == 0 %}
+<h1>성공적으로 회원가입 되었습니다.</h1>
+<a href = "/ksum"><button class = "w-btn w-btn-green" style = "font-family: 'Jeju Gothic', sans-serif; font-weight : normal; font-size : 30px; margin : 20px 250px;">메인 페이지로</button></a>
+{% elif exception == 1 %}
+<h1>잘못 입력하셨습니다.</h1>
+<a href = "/ksum/login"><button class = "w-btn w-btn-green" style = "font-family: 'Jeju Gothic', sans-serif; font-weight : normal; font-size : 30px; margin : 20px 230px;">로그인 페이지로</button></a>
+{% elif exception == 2 %}
+<h1>남는 우산이 없습니다.</h1>
+<a href = "/ksum"><button class = "w-btn w-btn-green" style = "font-family: 'Jeju Gothic', sans-serif; font-weight : normal; font-size : 30px; margin : 20px 250px;">메인 페이지로</button></a>
+{% elif exception == 3 %}
+<h1 style ="font-size: 45px;">빌려가신 우산을 먼저 반납해주세요.</h1>
+<a href = "/ksum/umbrella_return/{{user}}"><button class = "w-btn w-btn-green" style = "font-family: 'Jeju Gothic', sans-serif; font-weight : normal; font-size : 30px; margin : 20px 250px;">반납하기</button></a>
+{% elif exception == 4 %}
+<h1>반납하실 우산이 없습니다.</h1>
+<a href = "/ksum"><button class = "w-btn w-btn-green" style = "font-family: 'Jeju Gothic', sans-serif; font-weight : normal; font-size : 30px; margin : 20px 250px;">메인 페이지로</button></a>
+{% endif %}
+
+
+{% endblock %}

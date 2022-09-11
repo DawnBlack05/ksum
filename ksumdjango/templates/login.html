@@ -1,0 +1,29 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h1>경신고 우산 빌리미</h1>
+<div style="margin-top:30px;">
+    <form method="post" action="" style="margin-left : 100px; margin-right : 100px;">
+        {% csrf_token %}
+        <fieldset style="width : 504px; height : 115px;">
+            <legend style="font-size: 25px; font-weight: normal">학번</legend>
+                <div style="position : relative; bottom : 8px">
+                    <label for="Student_number"></label>
+                    <div style="text-align: center"><input type = "number" id="Student_number" type="text" name="Student_number" style="width : 500px; height : 100px; font-size : 50px; outline : none; box-shadow: none; border:none; font-family: 'Jeju Gothic', sans-serif;"></div>
+                </div>
+        </fieldset>
+        <p></p>
+        <fieldset style="width : 504px; height : 115px;">
+            <legend style="font-size: 25px; font-weight: normal">비번</legend>
+                <div style="position : relative; bottom : 8px">
+                    <label for="Student_password"></label>
+                    <div style="text-align: center"><input id="Student_password" type="password" name="Student_password" style="width : 500px; height : 100px; font-size : 50px; outline : none; box-shadow: none; border:none; font-family: 'Jeju Gothic', sans-serif;"></div>
+                </div>
+        </fieldset>
+        
+        <div style = "text-align:right; margin-top : 20px"><input class = "w-btn w-btn-green" type="submit" value="다음" style = "font-size : 20px" /></div>
+    </form>
+
+</div>
+
+{% endblock %}
